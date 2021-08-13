@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Red-Social.Services", "Red-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Red-Social.Model", "Red-Social.Model\Red-Social.Model.csproj", "{66C9E563-85C4-41AF-AB52-8776F91597EE}"
 EndProject
-Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Reportes Estudiantes", "Reportes Estudiantes\Reportes Estudiantes.rptproj", "{E54A6F53-2E8C-4360-9163-4146E472106C}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,14 +42,6 @@ Global
 		{66C9E563-85C4-41AF-AB52-8776F91597EE}.DebugLocal|Any CPU.Build.0 = Debug|Any CPU
 		{66C9E563-85C4-41AF-AB52-8776F91597EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66C9E563-85C4-41AF-AB52-8776F91597EE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E54A6F53-2E8C-4360-9163-4146E472106C}.Debug|Any CPU.ActiveCfg = Debug
-		{E54A6F53-2E8C-4360-9163-4146E472106C}.Debug|Any CPU.Build.0 = Debug
-		{E54A6F53-2E8C-4360-9163-4146E472106C}.Debug|Any CPU.Deploy.0 = Debug
-		{E54A6F53-2E8C-4360-9163-4146E472106C}.DebugLocal|Any CPU.ActiveCfg = DebugLocal
-		{E54A6F53-2E8C-4360-9163-4146E472106C}.DebugLocal|Any CPU.Build.0 = DebugLocal
-		{E54A6F53-2E8C-4360-9163-4146E472106C}.Release|Any CPU.ActiveCfg = Release
-		{E54A6F53-2E8C-4360-9163-4146E472106C}.Release|Any CPU.Build.0 = Release
-		{E54A6F53-2E8C-4360-9163-4146E472106C}.Release|Any CPU.Deploy.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
