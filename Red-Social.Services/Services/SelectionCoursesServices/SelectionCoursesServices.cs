@@ -230,7 +230,7 @@ namespace Red_Social.Services.Services.SelectionCoursesServices
             var validateMonday =
                  (from selection in GetAll()
                   join courses in _courseService.GetAll() on selection.CoursesId equals courses.ID
-                  where selection.StudentId.Equals(Model.StudentId) && courses.Day.Equals("Sabados")
+                  where selection.StudentId.Equals(Model.StudentId) && courses.Day.Equals("Martes")
                   select new { Inicial = courses.InitialTime, Final = courses.FinalTime }).ToList();
 
             foreach (var mondayValidate in validateMonday)
