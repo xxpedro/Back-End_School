@@ -159,6 +159,12 @@ namespace Red_Social.Services.Services.SelectionCoursesServices
 
         public bool validateMondays(MatterSelection Model)
         {
+            var getCurrentMatter = _courseService.GetAll().Where(x => x.ID.Equals(Model.CoursesId)).First();
+            int initialcurrent = Convert.ToInt32(getCurrentMatter.InitialTime);
+            int finalciurrent = Convert.ToInt32(getCurrentMatter.FinalTime);
+            int currentHour = (finalciurrent - initialcurrent);
+            if (currentHour >= 9) return false;
+
             int horas = 0;
             var validateMonday =
                  (from selection in GetAll()
@@ -175,9 +181,13 @@ namespace Red_Social.Services.Services.SelectionCoursesServices
                 int finalHour = Convert.ToInt32(mondayValidate.Final);
 
                 int calculateMondayHours = (finalHour - initialHour);
-                horas = horas + calculateMondayHours;
+                horas = horas + (calculateMondayHours + currentHour);
+                currentHour = 0;
 
-                if (horas >= 8) return false;
+
+                if (horas >= 9) return false;
+                currentHour = 0;
+
             }
 
             return true;
@@ -213,6 +223,8 @@ namespace Red_Social.Services.Services.SelectionCoursesServices
             int initialcurrent = Convert.ToInt32(getCurrentMatter.InitialTime);
             int finalciurrent = Convert.ToInt32(getCurrentMatter.FinalTime);
             int currentHour = (finalciurrent - initialcurrent);
+            if (currentHour >= 9) return false;
+
 
             int horas = 0;
             var validateMonday =
@@ -228,10 +240,9 @@ namespace Red_Social.Services.Services.SelectionCoursesServices
 
                 int calculateMondayHours = (finalHour - initialHour);
                 horas = horas + (calculateMondayHours + currentHour);
-                currentHour = 0;
 
 
-                if (horas >= 8) return false;
+                if (horas >= 9) return false;
                currentHour = 0;
 
             }
@@ -245,6 +256,7 @@ namespace Red_Social.Services.Services.SelectionCoursesServices
             int initialcurrent = Convert.ToInt32(getCurrentMatter.InitialTime);
             int finalciurrent = Convert.ToInt32(getCurrentMatter.FinalTime);
             int currentHour = (finalciurrent - initialcurrent);
+            if (currentHour >= 9) return false;
 
 
             int horas = 0;
@@ -262,7 +274,7 @@ namespace Red_Social.Services.Services.SelectionCoursesServices
                 int calculateMondayHours = (finalHour - initialHour);
                 horas = horas + (calculateMondayHours + currentHour);
 
-                if (horas >= 8) return false;
+                if (currentHour >= 9) return false;
                 currentHour = 0;
             }
 
@@ -275,7 +287,10 @@ namespace Red_Social.Services.Services.SelectionCoursesServices
             int initialcurrent = Convert.ToInt32(getCurrentMatter.InitialTime);
             int finalciurrent = Convert.ToInt32(getCurrentMatter.FinalTime);
             int currentHour = (finalciurrent - initialcurrent);
+            if (currentHour >= 9) return false;
 
+
+            if (currentHour >= 9) return false;
             int horas = 0;
             var validateThursday =
                  (from selection in GetAll()
@@ -291,7 +306,7 @@ namespace Red_Social.Services.Services.SelectionCoursesServices
                 int calculateMondayHours = (finalHour - initialHour);
                 horas = horas + (calculateMondayHours + currentHour);
 
-                if (horas >= 8) return false;
+                if (horas >= 9) return false;
                 currentHour = 0;
 
             }
@@ -305,6 +320,8 @@ namespace Red_Social.Services.Services.SelectionCoursesServices
             int initialcurrent = Convert.ToInt32(getCurrentMatter.InitialTime);
             int finalciurrent = Convert.ToInt32(getCurrentMatter.FinalTime);
             int currentHour = (finalciurrent - initialcurrent);
+            if (currentHour >= 9) return false;
+
 
             int horas = 0;
             var validateFriday =
@@ -321,7 +338,7 @@ namespace Red_Social.Services.Services.SelectionCoursesServices
                 int calculateMondayHours = (finalHour - initialHour);
                 horas = horas + (calculateMondayHours + currentHour);
 
-                if (horas >= 8) return false;
+                if (horas >= 9) return false;
                 currentHour = 0;
 
             }
@@ -334,6 +351,8 @@ namespace Red_Social.Services.Services.SelectionCoursesServices
             int initialcurrent = Convert.ToInt32(getCurrentMatter.InitialTime);
             int finalciurrent = Convert.ToInt32(getCurrentMatter.FinalTime);
             int currentHour = (finalciurrent - initialcurrent);
+            if (currentHour >= 9) return false;
+
 
             int horas = 0;
             var validateSaturday =
@@ -350,7 +369,7 @@ namespace Red_Social.Services.Services.SelectionCoursesServices
                 int calculateMondayHours = (finalHour - initialHour);
                 horas = horas + (calculateMondayHours + currentHour);
 
-                if (horas >= 8) return false;
+                if (horas >= 9) return false;
                 currentHour = 0;
 
             }
