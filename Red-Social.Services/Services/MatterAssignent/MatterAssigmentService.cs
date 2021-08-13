@@ -179,7 +179,7 @@ namespace Red_Social.Services.Services.MatterAssignent
                 int finalHour = Convert.ToInt32(mondayValidate.Final);
 
                 int calculateMondayHours = (finalHour - initialHour);
-                horas = horas + calculateMondayHours;
+                horas = horas + (calculateMondayHours + currentHour);
 
                 if (horas >= 9) return false;
             }
