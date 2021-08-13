@@ -1,24 +1,9 @@
-# front-escuelita
+# Back-End_escuelita
 
-## Project setup
-```
-npm install
-```
+## Run de Project
+Run in your visual studio
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## things to keep in mind
+this project is based on some of the solid principles and onion structure.
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
